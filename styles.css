@@ -11,3 +11,29 @@
 }.fedup>strong{font:45px Anton}.fedup>strong em{color:#f26a21;font-style:normal}.fedup small{font:800 12px Barlow Condensed;letter-spacing:2px}.dash{display:grid;grid-template-columns:1.15fr .85fr 1fr .95fr;gap:7px;padding:8px 20px;background:#151719}.dash article{min-height:295px;border:2px solid #383b3e;background:#111416;padding:15px;position:relative}.dash h2{font:800 27px/1 Barlow Condensed;margin:0 0 13px}.dash h2:after{content:"";display:block;width:55px;border-bottom:3px solid #f26a21;margin-top:8px}.dash p{font-size:14px;line-height:1.5}.dash p b,.dash h2 b{color:#f26a21}.smallbtn{position:absolute;bottom:12px;left:15px;font-size:16px;padding:7px 16px}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.thumbs i{aspect-ratio:.82;background:linear-gradient(145deg,#334353,#111820);border:1px solid #777;display:grid;place-items:center;font:700 10px Barlow Condensed;color:#73808b}.merch{height:160px;display:flex;align-items:center;justify-content:center;gap:15px}.merch div{width:110px;height:125px;background:#112035;display:grid;place-items:center;text-align:center;font:22px Anton}.merch b{color:#f26a21}.signup{background:linear-gradient(145deg,#f26a21,#d95316)!important;color:#090b0e}.signup h2{text-align:center}.signup h2:after{display:none}.signup form{display:grid;gap:7px}.signup input{border:0;background:#090b0e;color:white;padding:11px}.signup button{border:0;background:#071a31;color:white;padding:10px;font:800 21px Barlow Condensed}.signup small{text-align:center;font-family:"Permanent Marker"}.corp{display:grid;grid-template-columns:repeat(5,1fr) 1.25fr;padding:0 20px;background:#101214;border-block:2px solid #383b3e}.corp a{display:flex;align-items:center;gap:12px;padding:14px;border-right:1px solid #444}.corp a>span{font-size:34px}.corp a>b{font:800 18px Barlow Condensed}.corp small{display:block;font:12px Inter}.tag{margin:9px 0 9px 15px;padding:7px 12px;border:2px solid #444;transform:rotate(-2deg);font:800 18px Barlow Condensed}.tag strong{color:#f26a21}.characters,.behind{padding:70px 6%;background:#08111d}.eyebrow{color:#f26a21;font:800 15px Barlow Condensed;letter-spacing:2px}.characters>h2,.behind h2{font:clamp(44px,5vw,70px) Anton;margin:5px 0 30px}.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}.cards article{border:1px solid #314154;background:#101c2a;padding:8px;text-align:center}.cards article>div{aspect-ratio:.8;background:linear-gradient(145deg,#304355,#0b121a);display:grid;place-items:center;color:#6b7b8a;border-bottom:3px solid #f26a21;font:800 16px Barlow Condensed}.cards h3{font:800 20px Barlow Condensed;margin:9px 0 2px}.cards p{font-size:12px;color:#b5bdc5;margin:0 0 8px}.characters>small{display:block;margin-top:12px;color:#7d8994}.behind{display:grid;grid-template-columns:1fr 1fr;gap:45px;background:#111}.behind p{line-height:1.6;color:#ccc}.teaser{min-height:280px;background:radial-gradient(circle,#173553,#07101a 68%);border:1px solid #444;display:grid;place-items:center;align-content:center;text-align:center}.teaser span{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:#f26a21;color:#111;font-size:28px}.teaser h3{font:800 27px Barlow Condensed;margin-bottom:0}footer{text-align:center;padding:45px 20px;background:#050607;color:#8c969f}.foot{justify-content:center;font-size:30px;color:white}
 @media(max-width:1050px){nav{gap:13px;font-size:14px}.hero{grid-template-columns:285px 1fr 175px}.big{font-size:60px}.dash{grid-template-columns:1fr 1fr}.corp{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:780px){header{height:68px}.mini{font-size:25px}#menu{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#080a0d;flex-direction:column;padding:15px 25px}nav.open{display:flex}nav a{padding:9px}.hero{grid-template-columns:1fr}.hero-left{padding:40px 28px}.stage{min-height:420px}.fedup{padding:25px}.dash{grid-template-columns:1fr}.corp{grid-template-columns:1fr 1fr;padding:0}.cards{grid-template-columns:1fr 1fr}.behind{grid-template-columns:1fr}}
+
+/* SHIPPED OUT - CAST PHOTO DISPLAY FIX */
+
+.characters .cast-entry .cast-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #273448;
+}
+
+.characters .cast-entry .cast-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  filter: none;
+  opacity: 1;
+  transform: none;
+  image-rendering: auto;
+}
