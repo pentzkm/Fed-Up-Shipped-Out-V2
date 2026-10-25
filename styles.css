@@ -37,3 +37,18 @@
   transform: none;
   image-rendering: auto;
 }
+/* Consistent, sharp cast portraits */
+.characters .cast-entry .cast-photo {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.characters .cast-entry .cast-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: none;
+  transform: none;
+  image-rendering: auto;
+}
