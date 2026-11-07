@@ -181,6 +181,20 @@
   .corp .corp-action b { font-size: 15px; }
 }
 </style>
+<style id="partner-popup-styles">
+/* Partnership tile uses the same corporate-button layout and hover styling. */
+.corp .partner-tile{border-right:0}
+.partner-modal{position:fixed;box-sizing:border-box;width:min(520px,calc(100vw - 28px));max-width:none;max-height:85vh;overflow-y:auto;padding:clamp(20px,4vw,30px);background:#152337;color:#fff;border:2px solid #f47b20;border-radius:10px;box-shadow:0 24px 80px #000b}
+.partner-modal::backdrop{background:rgba(0,0,0,.82)}
+.partner-modal h2{font-family:Anton,'Barlow Condensed',sans-serif;font-size:clamp(28px,5vw,40px);line-height:1.1;color:#f47b20;margin:0 40px 14px 0}
+.partner-modal p{font-family:Inter,Arial,sans-serif;line-height:1.5}
+.partner-options p{padding:12px 0;border-bottom:1px solid #ffffff33}
+.partner-options strong{color:#f47b20}
+.partner-close{position:absolute;top:10px;right:10px;width:38px;height:38px;border:0;border-radius:50%;background:#f47b20;color:#101827;font-size:26px;cursor:pointer}
+.partner-email{display:block;margin-top:22px;padding:15px;background:#f47b20;color:#101827;text-align:center;text-decoration:none;font:800 14px Inter,Arial,sans-serif;border-radius:4px}
+.partner-email:hover,.partner-email:focus-visible{background:#fff;color:#152337}
+.partner-contact{text-align:center;font-size:13px;margin-top:18px}
+</style>
 </head>
 <body>
 <header><a class="logo mini" href="#home"><span>SHIPPED</span><b>OUT</b></a><button id="menu">☰</button><nav><a href="#home">HOME</a><a href="https://shipped-out.printify.me/" target="_blank" rel="noopener noreferrer">MERCH</a><a href="#behind">BEHIND THE SCENES</a></nav></header>
@@ -212,7 +226,8 @@
 <button type="button" class="corp-action" data-corp-open="apply"><span>♟</span><b>APPLY TO WORK<small>Think you can handle it?</small></b></button>
 <button type="button" class="corp-action" data-corp-open="vote"><span>★</span><b>VOTE FOR YOUR FAVORITE EMPLOYEE<small>Voting opens soon!</small></b></button>
 <button type="button" class="corp-action" data-corp-open="safety"><span>♢</span><b>SAFETY FIRST<small>Don't get hurt. It's bad for numbers.</small></b></button>
-<div class="tag">DELIVERING PACKAGES.<br/>DELIVERING PROBLEMS.<br/><strong>DELIVERING LAUGHS.</strong></div></section>
+<button type="button" class="corp-action partner-tile" onclick="document.getElementById('partnerModal').showModal()" aria-haspopup="dialog" aria-controls="partnerModal"><span>★</span><b>BECOME A PARTNER<small>HELP US DELIVER THE LAUGHS.</small></b></button>
+</section>
 <section class="characters" id="characters"><p class="eyebrow">THE PEOPLE WHO KEEP FED UP RUNNING. SOMEHOW.</p><h2>MEET THE EMPLOYEES</h2><div class="cards"><article class="cast-entry"><button aria-label="Read biography for Walt" class="cast-bio-trigger" data-role="Walt" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" src="images/cast/Walt-grid.jpg" data-cast-image="Walt" data-grid-test="true" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">WALT</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Sloane" class="cast-bio-trigger" data-role="Sloane" type="button"><span aria-hidden="true" class="cast-photo"> <img alt="" data-cast-image="Sloane" hidden="" loading="lazy"/> <span class="cast-photo-fallback">PHOTO</span> </span><span class="cast-character">SLOANE</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Steve" class="cast-bio-trigger" data-role="Steve" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Steve" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">STEVE</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Timmy" class="cast-bio-trigger" data-role="Timmy" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Timmy" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">TIMMY</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Grizz" class="cast-bio-trigger" data-role="Grizz" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Grizz" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">GRIZZ</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Santiago" class="cast-bio-trigger" data-role="Burnout" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Burnout" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">SANTIAGO</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Katherine" class="cast-bio-trigger" data-role="Perfectionist" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Perfectionist" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">KATHERINE</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Sarah" class="cast-bio-trigger" data-role="Conspiracy Theorist" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="ConspiracyTheorist" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">SARAH</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Miles" class="cast-bio-trigger" data-role="Rookie" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Rookie" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">MILES</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Carrie" class="cast-bio-trigger" data-role="HR Lady" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="HR Lady" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">CARRIE</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Della" class="cast-bio-trigger" data-role="Security Guard" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Security" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">DELLA</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article><article class="cast-entry"><button aria-label="Read biography for Thermos" class="cast-bio-trigger" data-role="Thermos" type="button"><span aria-hidden="true" class="cast-photo"><img alt="" data-cast-image="Thermos" hidden="" loading="lazy"/><span class="cast-photo-fallback">PHOTO</span></span><span class="cast-character">THERMOS</span><span class="cast-cta">MEET THE CHARACTER →</span></button></article></div><small>Select any character to meet the person behind the chaos.</small></section>
 <section class="behind" id="behind"><div><p class="eyebrow">OFF THE CLOCK</p><h2>BEHIND THE SCENES</h2><p>Production updates, cast chaos, table reads, bloopers and everything that probably shouldn't make it past HR.</p></div><div class="shipped-teaser-preview" id="teaser"><iframe src="https://www.youtube-nocookie.com/embed/FwFNcczOcqc" title="Shipped Out official teaser" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></section>
 <style id="shipped-teaser-preview-styles">
@@ -370,4 +385,45 @@ document.querySelectorAll('.cast-bio-trigger').forEach(button=>button.addEventLi
  });
 })();
 </script>
+  <dialog id="partnerModal" class="partner-modal" aria-labelledby="partnerModalTitle">
+  <button class="partner-close"
+    onclick="document.getElementById('partnerModal').close()"
+    aria-label="Close">&times;</button>
+
+  <h2 id="partnerModalTitle">PARTNER WITH SHIPPED OUT</h2>
+  <p>Big laughs. Local roots. Real opportunities.</p>
+
+  <p>
+    Join us in bringing a Wichita-made workplace
+    comedy to life!
+  </p>
+
+  <div class="partner-options">
+    <p><strong>ADVERTISING PARTNERS</strong><br>
+    $1,000–$10,000 | Branded comedy, promotion
+    and business exposure.</p>
+
+    <p><strong>PRODUCTION PARTNERS</strong><br>
+    $1,000–$10,000 | Support local filmmaking
+    and receive partner recognition.</p>
+
+    <p><strong>IN-KIND PARTNERS</strong><br>
+    Locations, lodging, transportation,
+    catering, equipment and services.</p>
+
+    <p><strong>CUSTOM PARTNERSHIPS</strong><br>
+    Larger and tailored opportunities available.</p>
+  </div>
+
+  <a class="partner-email"
+     href="mailto:contact@shippedoutseries.com?subject=Shipped%20Out%20Partnership%20Inquiry">
+    EMAIL JESSE ABOUT PARTNERSHIP
+  </a>
+
+  <p class="partner-contact">
+    Jesse Bailey<br>
+    contact@shippedoutseries.com
+  </p>
+</dialog>
 </body></html>
+
